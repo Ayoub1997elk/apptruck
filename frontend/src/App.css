@@ -1,0 +1,111 @@
+#root {
+  margin: 0 auto;
+  padding: 4rem;
+  text-align: left;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #010211);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/background.jpg); /* Use the imported image */
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Fix the background while scrolling */
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+}
+
+/* App container styling */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 64px; /* Match navbar height */
+  background-color: #ececec9d;
+
+}
+
+/* Content container styling */
+.content-container {
+  flex-grow: 1;
+  padding: 24px;
+  margin-left: 200px; /* Always leave space for the sidebar */
+
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.616); /* Optional: Add a shadow */
+}
+
+.MuiDrawer-paper {
+  z-index: 1200 !important;
+}
+
+
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  background: #ecf0f1;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+ul li:hover {
+  background: #bdc3c7;
+}

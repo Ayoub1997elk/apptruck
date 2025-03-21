@@ -1,0 +1,72 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1300; /* Increased z-index */
+  }
+  
+  .navbar-left .app-name {
+    margin: 0;
+    font-size: 2rem;
+    color: #007bff;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px; /* Ensure gap between profile picture and name */
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #007bff; /* Ensure text color is visible */
+  }
+  
+  .user-role {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .settings, .logout {
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .settings-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .settings:hover .settings-dropdown {
+    display: block;
+  }
+  
+  .logout {
+    cursor: pointer;
+  }

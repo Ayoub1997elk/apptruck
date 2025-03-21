@@ -1,0 +1,144 @@
+/* Card styling */
+.vehicle-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.178);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+  }
+  
+  .vehicle-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.527); /* Dark overlay for better text visibility */
+    z-index: 1;
+  }
+  
+  .vehicle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.342);
+  }
+  
+  /* License Plate styling */
+  .card-title.license-plate {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 16px; /* Add space at the top */
+    margin-bottom: 16px; /* Add space below the license plate */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    z-index: 2; /* Ensure it's above the overlay */
+    position: relative; /* Ensure it's positioned correctly */
+  }
+  
+  /* Card content styling */
+  .card-content {
+    position: relative;
+    z-index: 3;
+    padding: 16px;
+    width: 90%; /* Ensure content takes full width */
+
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+  }
+  .card-title.license-plate {
+    
+    background-color: rgba(0, 0, 0, 0.253); /* Semi-transparent black background */
+    padding: 8px 16px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Ensure background wraps text */
+  }
+  
+  .card-title.license-plate:hover {
+    color: #000000; /* Change color on hover */
+
+  }
+  .card-title::before {
+    margin-right: 8px;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  
+  .card-detail {
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .card-detail:hover {
+    color: #ffcc00; /* Change color on hover */
+  }
+  
+  .card-detail::before {
+    content: "•"; /* Add a bullet point or icon */
+    margin-right: 8px;
+    color: #ffcc00;
+    font-size: 1.2rem;
+  }
+  
+  /* Status styling */
+  .card-detail.status {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #28a745; /* Green for active status */
+  }
+  
+  .card-detail.status.inactive {
+    color: #dc3545; /* Red for inactive status */
+  }
+  
+  /* Button styling */
+  .card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for buttons */
+    position: relative;
+    z-index: 2;
+  }
+  
+  .card-actions button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white; /* Ensure button icons are visible */
+  }
+  
+  .card-actions button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  
+  /* Animation for card entry */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .vehicle-card {
+    animation: fadeInUp 0.5s ease-out;
+  }
